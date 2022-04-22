@@ -1,9 +1,8 @@
-function component() {
-  const element = document.createElement('p');
+import { home } from './home';
+import { login } from './login';
+import { user } from './user';
+import { admin } from './admin';
 
-  element.textContent = 'eeee';
+const content = document.querySelector('#content');
 
-  return element;
-}
-
-document.body.appendChild(component());
+content.appendChild(admin());
