@@ -8,7 +8,8 @@ function user() {
   });
 
   const para = createElement('p', {
-    textContent: 'You login as an user',
+    textContent: 'ENTRASTE COMO UN USUARIO',
+    class: ['log-as'],
   });
 
   el.appendChild(para);
