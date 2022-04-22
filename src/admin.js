@@ -8,7 +8,8 @@ function admin() {
   });
 
   const para = createElement('p', {
-    textContent: 'You login as an admin',
+    textContent: 'ENTRASTE COMO UN ADMINISTRADOR',
+    class: ['log-as'],
   });
 
   el.appendChild(para);
