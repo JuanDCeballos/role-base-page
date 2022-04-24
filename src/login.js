@@ -23,6 +23,8 @@ function login() {
 
   const userInput = createElement('input', {
     type: 'text',
+    class: ['user-input'],
+    id: 'input-user',
   });
 
   const pwLabel = createElement('label', {
@@ -31,6 +33,8 @@ function login() {
 
   const pwInput = createElement('input', {
     type: 'password',
+    class: ['user-input'],
+    id: 'input-password',
   });
 
   inputs.appendChild(userLabel);
