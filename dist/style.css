@@ -31,7 +31,6 @@ body {
 }
 
 .log-as {
-  font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
@@ -62,13 +61,38 @@ body {
 .inputs-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.user-input {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+}
+
+.user-input:focus {
+  border: 1px solid var(--Red);
 }
 
 .cta-login {
+  color: var(--Light-Grayish-Blue);
   border: none;
-  color: var(--Very-Dark-Blue);
   background-color: var(--Red);
   width: 6rem;
   height: 3rem;
   border-radius: 0.3rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.cta-login:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgb(255 92 92 / 90%);
+  cursor: pointer;
 }
