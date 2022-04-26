@@ -65,6 +65,7 @@ body {
   text-align: center;
   transition: all ease-in-out 0.2s;
   margin-right: 10px;
+  padding-top: 0;
 }
 
 .go-home:hover {
