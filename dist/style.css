@@ -1,7 +1,6 @@
 /* Global styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 * {
@@ -28,6 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Barlow', sans-serif;
+  font-weight: 400;
 }
 
 .log-as {
@@ -36,7 +36,106 @@ body {
   text-align: center;
 }
 
+.cta {
+  color: var(--Light-Grayish-Blue);
+  border: none;
+  background-color: var(--Red);
+  border-radius: 0.3rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgb(255 92 92 / 90%);
+  cursor: pointer;
+}
+
+.go-home {
+  font-size: 40px;
+  color: var(--Very-Dark-Blue);
+  border: 1px solid var(--Very-Dark-Blue);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  text-align: center;
+  transition: all ease-in-out 0.2s;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+.go-home:hover {
+  cursor: pointer;
+  border: 1px solid var(--Red);
+  background-color: var(--Red);
+  color: var(--Light-Grayish-Blue);
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgb(255 92 92 / 90%);
+}
+
+.final-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Home */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 1200px;
+  gap: 50px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.logo-home {
+  width: 2rem;
+  height: auto;
+}
+
+.nav-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.nav-text:hover {
+  text-decoration: underline var(--Very-Dark-Blue);
+  color: var(--Dark-Grayish-Blue);
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-home-image {
+  width: 90vw;
+  max-width: 700px;
+  height: auto;
+}
+
+.title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.cta-home {
+  width: 12rem;
+  height: 3rem;
+  margin: 10px 0 0 0;
+}
 
 /* Login */
 
@@ -56,6 +155,7 @@ body {
 .logo-img {
   width: 5rem;
   height: auto;
+  cursor: pointer;
 }
 
 .inputs-container {
@@ -79,20 +179,15 @@ body {
 }
 
 .cta-login {
-  color: var(--Light-Grayish-Blue);
-  border: none;
-  background-color: var(--Red);
   width: 6rem;
   height: 3rem;
-  border-radius: 0.3rem;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  transition: 0.3s;
 }
 
-.cta-login:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 25px rgb(255 92 92 / 90%);
-  cursor: pointer;
+/* Media queries */
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
