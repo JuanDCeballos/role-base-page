@@ -1,6 +1,11 @@
 import { createElement } from './helperDOMfunction';
 import '../dist/style.css';
 import logo from './images/logo.svg';
+import { content } from './index';
+import { user } from './user';
+import { admin } from './admin';
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import { home } from './home';
 
 function login() {
   const el = createElement('div', {
@@ -8,9 +13,14 @@ function login() {
     class: ['login-container'],
   });
 
-  const img = createElement('img', {
+  const logoImg = createElement('img', {
     class: ['logo-img'],
     src: logo,
+  });
+
+  logoImg.addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(home());
   });
 
   const inputs = createElement('div', {
@@ -44,11 +54,21 @@ function login() {
 
   const btn = createElement('button', {
     id: 'cta-login',
-    class: ['cta-login'],
+    class: ['cta', 'cta-login'],
     textContent: 'Login ',
   });
 
-  el.appendChild(img);
+  btn.addEventListener('click', () => {
+    if (pwInput.value == 'Admin') {
+      content.innerHTML = '';
+      content.appendChild(admin());
+    } else if (pwInput.value == 'User') {
+      content.innerHTML = '';
+      content.appendChild(user());
+    }
+  });
+
+  el.appendChild(logoImg);
   el.appendChild(inputs);
   el.appendChild(btn);
 
